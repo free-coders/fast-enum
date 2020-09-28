@@ -18,6 +18,7 @@
     <modules>
         <module>fenum</module>
         <module>common</module>
+        <module>menum</module>
     </modules>
 
 
