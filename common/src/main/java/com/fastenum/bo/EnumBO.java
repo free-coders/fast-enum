@@ -13,6 +13,11 @@ import java.util.Date;
 public class EnumBO {
 
     /**
+     * 代码编号
+     */
+    private String codeId;
+
+    /**
      * 枚举值编号
      */
     private String enumId;

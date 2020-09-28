@@ -3,6 +3,7 @@
 <mapper namespace="com.fastenum.fenum.mybatis.CodeEnumMapper">
 
   <resultMap id="BaseResultMap" type="com.fastenum.bo.EnumBO">
+    <result column="code_id" jdbcType="VARCHAR" property="codeId" />
     <result column="enum_id" jdbcType="VARCHAR" property="enumId" />
     <result column="enum_desc" jdbcType="VARCHAR" property="enumDesc" />
     <result column="language" jdbcType="VARCHAR" property="language" />
@@ -12,7 +13,7 @@
   </resultMap>
 
   <sql id="Base_Column_List">
-     enum_id , enum_desc , `language` , create_datetime , mod_datetime , status
+     code_id , enum_id , enum_desc , `language` , create_datetime , mod_datetime , status
   </sql>
 
   <select id="getEnumBoListByCondition" parameterType="com.fastenum.condition.CodeEnumCondition" resultMap="BaseResultMap">

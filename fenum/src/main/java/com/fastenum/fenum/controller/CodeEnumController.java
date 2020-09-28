@@ -47,8 +47,7 @@ public class CodeEnumController {
             }
             throw new BusinessException( enumBO , CommonUtil.processErrorString(bindingResult) );
         }
-
-        return ResponseData.create( null );
+        return ResponseData.create( codeEnumService.getEnumBoListByCondition( condition ) );
     }
 
 

@@ -2,7 +2,6 @@ package com.fastenum.fenum.mybatis;
 
 import com.fastenum.bo.EnumBO;
 import com.fastenum.condition.CodeEnumCondition;
-import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
