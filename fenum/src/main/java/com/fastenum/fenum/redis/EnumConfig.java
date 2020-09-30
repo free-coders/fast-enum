@@ -5,13 +5,13 @@ package com.fastenum.fenum.redis;
  * @Author : zhangMing
  * @Date : Created in 14:49 2020-09-28
  */
-public class CodeEnumConfig extends BaseRedisKeyConfig {
+public class EnumConfig extends BaseRedisKeyConfig {
 
 
-    private CodeEnumConfig( String prefix , int expireSeconds) {
+    private EnumConfig(String prefix , int expireSeconds) {
         super(prefix, expireSeconds);
     }
 
-    public static CodeEnumConfig fcode = new CodeEnumConfig( "fcode" , 1000);
+    public static EnumConfig fcode = new EnumConfig( "fcode" , 1000);
 
 }

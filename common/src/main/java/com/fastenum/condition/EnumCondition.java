@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
  * @Date : Created in 18:30 2020-09-27
  */
 @Data
-public class CodeEnumCondition {
+public class EnumCondition {
 
     /**
      * 代码编号
@@ -23,11 +23,14 @@ public class CodeEnumCondition {
      */
     private String enumId;
 
-    public CodeEnumCondition(@NotBlank(message="代码编号不能为空") String codeId) {
+    public EnumCondition() {
+    }
+
+    public EnumCondition(@NotBlank(message="代码编号不能为空") String codeId) {
         this.codeId=codeId;
     }
 
-    public CodeEnumCondition(@NotBlank(message="代码编号不能为空") String codeId, String enumId) {
+    public EnumCondition(@NotBlank(message="代码编号不能为空") String codeId, String enumId) {
         this.codeId=codeId;
         this.enumId=enumId;
     }

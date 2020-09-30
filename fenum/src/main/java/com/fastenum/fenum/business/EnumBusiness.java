@@ -1,8 +1,8 @@
 package com.fastenum.fenum.business;
 
 import com.fastenum.bo.EnumBO;
-import com.fastenum.condition.CodeEnumCondition;
-import com.fastenum.fenum.mybatis.CodeEnumMapper;
+import com.fastenum.condition.EnumCondition;
+import com.fastenum.fenum.mybatis.EnumMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -16,17 +16,17 @@ import java.util.List;
  */
 @Component
 @Slf4j
-public class CodeEnumBusiness {
+public class EnumBusiness {
 
     @Resource
-    private CodeEnumMapper codeEnumMapper;
+    private EnumMapper codeEnumMapper;
 
     /**
      * 根据条件获取枚举值
      * @param condition
      * @return
      */
-    public List<EnumBO> getEnumBoListByCondition(CodeEnumCondition condition) {
+    public List<EnumBO> getEnumBoListByCondition(EnumCondition condition) {
         return codeEnumMapper.getEnumBoListByCondition(condition);
     }
 

@@ -1,11 +1,10 @@
 package com.fastenum.fenum;
 
 import com.fastenum.bo.EnumBO;
-import com.fastenum.condition.CodeEnumCondition;
-import com.fastenum.einterface.CodeEnumService;
-import com.fastenum.fenum.controller.CodeEnumController;
+import com.fastenum.condition.EnumCondition;
+import com.fastenum.fservice.EnumService;
+import com.fastenum.fenum.controller.EnumController;
 import com.fastenum.fenum.start.FenumApplication;
-import com.sun.tools.javac.jvm.Code;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.Assert;
@@ -18,19 +17,19 @@ import java.util.List;
 class FenumApplicationTests {
 
     @Resource
-    private CodeEnumService codeEnumService;
+    private EnumService enumService;
 
     @Resource
-    private CodeEnumController codeEnumController;
+    private EnumController codeEnumController;
 
     /**
      * 条件查询代码枚举值
      */
     @Test
     void selectCodeEnumByCondition() {
-        CodeEnumCondition codeEnumCondition = new CodeEnumCondition("C00001" , "LA");
+        EnumCondition enumCondition= new EnumCondition("C00001" , "LA");
         Date date = new Date(  );
-        List<EnumBO> enumBOList = codeEnumService.getEnumBoListByCondition( codeEnumCondition );
+        List<EnumBO> enumBOList = enumService.getEnumBoListByCondition( enumCondition );
         Date edate = new Date(  );
         System.out.println(date.getTime() - edate.getTime());
         Assert.notEmpty( enumBOList );
