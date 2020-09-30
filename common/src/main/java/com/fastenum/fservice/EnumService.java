@@ -1,7 +1,7 @@
-package com.fastenum.einterface;
+package com.fastenum.fservice;
 
 import com.fastenum.bo.EnumBO;
-import com.fastenum.condition.CodeEnumCondition;
+import com.fastenum.condition.EnumCondition;
 
 import java.util.List;
 
@@ -10,13 +10,13 @@ import java.util.List;
  * @Author : zhangMing
  * @Date : Created in 18:48 2020-09-27
  */
-public interface CodeEnumService {
+public interface EnumService {
 
     /**
      * 根据条件获取枚举值
      * @param condition
      * @return
      */
-    public List<EnumBO> getEnumBoListByCondition(CodeEnumCondition condition);
+    public List<EnumBO> getEnumBoListByCondition(EnumCondition condition);
 
 }

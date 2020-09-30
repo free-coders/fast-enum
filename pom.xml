@@ -21,6 +21,7 @@
         <module>common</module>
         <module>menum</module>
         <module>eureka</module>
+        <module>fcall</module>
     </modules>
 
     <properties>
@@ -31,6 +32,7 @@
         <fastjson.version>1.2.38</fastjson.version>
         <commons.version>3.11</commons.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <fcall.version>0.0.1-SNAPSHOT</fcall.version>
     </properties>
 
     <dependencyManagement>

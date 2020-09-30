@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.fastenum.fenum.mybatis.CodeEnumMapper">
+<mapper namespace="com.fastenum.fenum.mybatis.EnumMapper">
 
   <resultMap id="BaseResultMap" type="com.fastenum.bo.EnumBO">
     <result column="code_id" jdbcType="VARCHAR" property="codeId" />
@@ -16,10 +16,10 @@
      code_id , enum_id , enum_desc , `language` , create_datetime , mod_datetime , status
   </sql>
 
-  <select id="getEnumBoListByCondition" parameterType="com.fastenum.condition.CodeEnumCondition" resultMap="BaseResultMap">
+  <select id="getEnumBoListByCondition" parameterType="com.fastenum.condition.EnumCondition" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from code_enum
+    from fenum_enum
     where
     <trim suffixOverrides="AND">
       <if test="codeId != null">
