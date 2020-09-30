@@ -21,4 +21,6 @@ public @interface FEnumMethod {
 
     String value() default "";
 
+    String type() default "GET";
+
 }

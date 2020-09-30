@@ -36,4 +36,19 @@ public class CodeConfigController {
         ResponseData responseData = fEnum.getCodeEnumsByCodeId(enumCondition);
         return ResponseData.create( responseData.getData() );
     }
+
+
+    /**
+     * post远程调用demo
+     * @return
+     */
+    @GetMapping("/postTest")
+    public ResponseData post(){
+        Map<String,Object> map = new HashMap<>(  );
+        EnumCondition enumCondition = new EnumCondition();
+        enumCondition.setCodeId( "PARAMs" );
+        ResponseData responseData = fEnum.post(enumCondition);
+        return ResponseData.create( responseData.getData() );
+    }
+
 }

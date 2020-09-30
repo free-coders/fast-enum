@@ -13,7 +13,10 @@ import com.fastenum.response.ResponseData;
 @FEnumClient( value = "fenum")
 public interface FEnum {
 
-    @FEnumMethod( value = "/enum/enum_by_condititon")
-    public ResponseData getCodeEnumsByCodeId(EnumCondition condition);
+    @FEnumMethod( value = "/enum/enum_by_condititon" , type = "GET")
+    ResponseData getCodeEnumsByCodeId(EnumCondition condition);
+
+    @FEnumMethod( value = "/enum/demo" , type = "POST")
+    ResponseData post(EnumCondition condition);
 
 }

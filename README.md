@@ -17,4 +17,5 @@
 
 2020.09.30 - 增加ribbon
 * 增加增加ribbon，封装了ribbon。封装后使用方式类似fegin（这里使用了fcall模块）后续会把该模块完善的更强大。目前仅支持get类型调用。
-    
+
+* 增加fcall的post调用方式。

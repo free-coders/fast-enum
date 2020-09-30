@@ -7,10 +7,7 @@ import com.fastenum.exception.BusinessException;
 import com.fastenum.response.ResponseData;
 import com.fastenum.utils.CommonUtil;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.validation.Valid;
@@ -34,7 +31,7 @@ public class EnumController {
      * @return
      */
     @GetMapping("/enum_by_condititon")
-    public ResponseData getCodeEnumsByCodeId(@Valid EnumCondition condition ,
+    public ResponseData getCodeEnumsByCodeId(@RequestBody @Valid EnumCondition condition ,
                                              BindingResult bindingResult){
         //判断参数是否正确
         if (bindingResult.hasErrors()){
@@ -49,6 +46,18 @@ public class EnumController {
         }
         return ResponseData.create( enumService.getEnumBoListByCondition( condition ) );
     }
+
+
+    /**
+     * fcall post demo test
+     * @param condition
+     * @return
+     */
+    @PostMapping("/demo")
+    public ResponseData getCodeEnumsByCodeId(@RequestBody EnumCondition condition){
+        return ResponseData.create( condition );
+    }
+
 
 
 }
