@@ -24,6 +24,10 @@
             <version>5.2.9.RELEASE</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+        </dependency>
     </dependencies>
 
     <parent>
